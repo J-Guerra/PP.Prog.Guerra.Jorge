@@ -5,7 +5,9 @@ def ordenarCaracteres(cadena: str) -> str:
     for i in range(tam - 1):
         for j in range(i + 1, tam):
             if caracteres[i] > caracteres[j]:
-                caracteres[i], caracteres[j] = caracteres[j], caracteres[i]
+                aux = caracteres[i]
+                caracteres[i] = caracteres[j]
+                caracteres[j] = aux
     
     cadena_ordenada = ''.join(caracteres)
     return cadena_ordenada
